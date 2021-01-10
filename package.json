@@ -1,0 +1,19 @@
+{
+  "name": "martianrobotschallenge",
+  "version": "1.0.0",
+  "description": "A coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukealvarez/MartianRobotsChallenge.git"
+  },
+  "author": "Luke Alvarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukealvarez/MartianRobotsChallenge/issues"
+  },
+  "homepage": "https://github.com/lukealvarez/MartianRobotsChallenge#readme"
+}
