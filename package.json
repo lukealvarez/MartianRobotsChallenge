@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lukealvarez/MartianRobotsChallenge/issues"
   },
-  "homepage": "https://github.com/lukealvarez/MartianRobotsChallenge#readme"
+  "homepage": "https://github.com/lukealvarez/MartianRobotsChallenge#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
