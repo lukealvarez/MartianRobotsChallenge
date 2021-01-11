@@ -4,7 +4,7 @@ export function readInstructionFile (file) {
     let fileData = fs.readFileSync(file, 'utf8')
                      .split(/\r?\n/).filter(item => item);
 
-    //To Do: Add validation
+    //To Do: Add validation with try/catch
 
     return fileData;
 }
