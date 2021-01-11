@@ -13,10 +13,13 @@ try {
 
     const planetCoordinates = data[0].split(SPLIT_CHAR);
 
-    if (planetCoordinates[0] <= process.env.MAX_PLANET_COORDINATES &&
-        planetCoordinates[1] <= process.env.MAX_PLANET_COORDINATES) {
+    const posPlanetX = parseInt(planetCoordinates[0]);
+    const posPlanetY = parseInt(planetCoordinates[1]);
 
-        const mars = new planet(process.env.PLANET_NAME, planetCoordinates[0], planetCoordinates[1]);
+    if (posPlanetX <= parseInt(process.env.MAX_PLANET_COORDINATES) &&
+        posPlanetY <= parseInt(process.env.MAX_PLANET_COORDINATES)) {
+
+        const mars = new planet(process.env.PLANET_NAME, posPlanetX, posPlanetY);
 
         for(let index = 1; index < data.length; index = index + 2) {
             

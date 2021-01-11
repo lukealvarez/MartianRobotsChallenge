@@ -69,12 +69,13 @@ export default class Robot {
         const newPosition = this.getNewPosition();
 
         if (!planet.checkIfIsOff(newPosition)){
-            if (!planet.checkIfExistScent(newPosition)) {
-                this.currentPosition = newPosition;
-            }
+            this.currentPosition = newPosition;
         } else {
-            planet.scents.push(this.currentPosition);
-            this.lost = true;
+            //Null or undefined are both falsy so the truth value is false when do not exist scent.
+            if (!planet.checkIfExistScent(this.currentPosition)) {
+                planet.scents.push(this.currentPosition);
+                this.lost = true;
+            }
         }
     }
 }

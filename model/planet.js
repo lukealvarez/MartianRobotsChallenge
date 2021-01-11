@@ -12,15 +12,15 @@ export default class Planet {
     checkIfIsOff(coordinate){
         return  coordinate.positionX > this.coordinate.positionX ||
                 coordinate.positionX < INITIAL_PLANET_VALUE ||
-                coordinate.positionY > this.coordinate.positionX ||
-                coordinate.positionX < INITIAL_PLANET_VALUE;
+                coordinate.positionY > this.coordinate.positionY ||
+                coordinate.positionY < INITIAL_PLANET_VALUE;
     }
 
     checkIfExistScent(coordinate){
-        let result = false;
+        let result = null;
 
         if (this.scents.length > 0) {
-            result = this.scents.includes(scent => scent.positionX == coordinate.positionX &&
+            result = this.scents.find(scent => scent.positionX == coordinate.positionX &&
                                           scent.positionY == coordinate.positionY);
         }
 
